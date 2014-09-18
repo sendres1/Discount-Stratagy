@@ -11,5 +11,10 @@ package dip.lab2;
  * @author sendres1
  */
 public interface TipCalculator {
+ 
+    // you do not need the "abstract" keyword because it is implicit
+	// just implement this interface and create your own derived class implementation
+	public abstract double getTip();
+    
     
 }

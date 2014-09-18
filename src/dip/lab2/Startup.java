@@ -25,7 +25,16 @@ public class Startup {
  
     public static void main(String[] args) {
         
-        
+        ServiceQuality(1);
+          TipManager tip = new FoodServiceTipCalculator(GOOD, 10.00);
+		
+            
+            
+	//	MessageManager copyit = new MessageManager( reader, writer );
+	//	copyit.acquireSend();
+		
+		// Send end of program message
+		System.out.println("Program ended.");
     }
 
 }
