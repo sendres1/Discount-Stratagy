@@ -20,9 +20,6 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     private double baseTipPerBag;
     private int bagCount;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
     private ServiceQuality serviceQuality;
 
     public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
@@ -32,6 +29,7 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         baseTipPerBag = 1.00; // set default value
     }
 
+    @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 

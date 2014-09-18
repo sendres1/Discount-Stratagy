@@ -19,16 +19,15 @@ import javax.swing.JOptionPane;
  * @author your name goes here
  */
 public class Startup {
-    public static enum ServiceQuality {
-           GOOD, FAIR, POOR
-    };
+//    public static enum ServiceQuality {
+//           GOOD, FAIR, POOR
+//    };
  
     public static void main(String[] args) {
-        
-        ServiceQuality(1);
-          TipManager tip = new FoodServiceTipCalculator(GOOD, 10.00);
-		
-            
+   
+       //   TipCalculator tipCalc = new FoodServiceTipCalculator(ServiceQuality.GOOD, 10.00);
+		TipManager tm = new TipManager(new FoodServiceTipCalculator(ServiceQuality.GOOD, 5));
+            System.out.println(tm.calculateTip());
             
 	//	MessageManager copyit = new MessageManager( reader, writer );
 	//	copyit.acquireSend();

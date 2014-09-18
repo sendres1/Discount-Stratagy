@@ -6,7 +6,7 @@ package dip.lab2;
  *
  * Any other best practice violations? Fix them too.
  *
- * @author your name goes here
+ * @sendres1
  */
 public class FoodServiceTipCalculator implements TipCalculator {
     private static final double MIN_BILL = 0.00;
@@ -17,9 +17,7 @@ public class FoodServiceTipCalculator implements TipCalculator {
     private static final double POOR_RATE = 0.10;
 
     private double bill;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
+
     private ServiceQuality serviceQuality;
 
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {

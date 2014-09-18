@@ -12,29 +12,31 @@ package dip.lab2;
  */
 public class TipManager {
     
-    private TipCalculator tip;
+    private TipCalculator tipCalc;
 
     // constructor
     public TipManager(TipCalculator tip) {
-        this.tip = tip;
+        this.tipCalc = tip;
     }
 
     // getter
-    public TipCalculator getTip() {
-        return tip;
+    public TipCalculator  getTipCalculator() {
+        return tipCalc;
     }
 
     //setter
-    public void setTip(TipCalculator tip) {
-        this.tip = tip;
+    public void setTipCalculator(TipCalculator tip) {
+        this.tipCalc = tip;
     }
    
     /**
      * Copy one msg of input from reader to writer. Program ends when carriage
      * return is entered. Notice how flexible this is due to polymorphism!
      */
-    public void calculateTip() {
-        Double amount = TipCalculator.getTip();
+    public double  calculateTip() {
+        double  amount = 0;
+       amount= tipCalc.getTip();
+       return amount;
         
     }
     
