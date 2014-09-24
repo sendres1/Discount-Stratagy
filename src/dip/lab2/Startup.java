@@ -26,11 +26,15 @@ public class Startup {
     public static void main(String[] args) {
    
        //   TipCalculator tipCalc = new FoodServiceTipCalculator(ServiceQuality.GOOD, 10.00);
-		TipManager tm = new TipManager(new FoodServiceTipCalculator(ServiceQuality.GOOD, 5));
-            System.out.println(tm.calculateTip());
+		TipManager tm = new TipManager(new FoodServiceTipCalculator(ServiceQuality.GOOD, 5.25));
+            System.out.println("Food Service tip " + tm.calculateTip());
             
-	//	MessageManager copyit = new MessageManager( reader, writer );
-	//	copyit.acquireSend();
+            
+            //   TipCalculator tipCalc = new BaggageServiceTipCalculator(ServiceQuality.GOOD, 10.00);
+		TipManager bm = new TipManager(new BaggageServiceTipCalculator(ServiceQuality.GOOD, 5));
+            System.out.println("Baggage Service tip " + bm.calculateTip());
+            
+	
 		
 		// Send end of program message
 		System.out.println("Program ended.");

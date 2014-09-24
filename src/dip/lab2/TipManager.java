@@ -34,9 +34,9 @@ public class TipManager {
      * return is entered. Notice how flexible this is due to polymorphism!
      */
     public double  calculateTip() {
-        double  amount = 0;
-       amount= tipCalc.getTip();
-       return amount;
+//        double  amount = 0;
+//       amount= tipCalc.getTip();
+       return tipCalc.getTip();
         
     }
     

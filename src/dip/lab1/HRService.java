@@ -9,6 +9,8 @@ import javax.swing.JOptionPane;
  * @author your name goes here
  */
 public class HRService {
+    
+     private  Employee employee;
     /** 
      * Constants can be used for retrieving annual wages of
      * various employee types. Is this the best way to go? Do we have
@@ -17,14 +19,7 @@ public class HRService {
     public static final String SALARIED_TYPE = "Salaried";
     public static final String HOURLY_TYPE = "Hourly";
 
-    /**
-     * Alternatively to the above, we could use an enum. Does this improve
-     * type safety?
-     */
-    public enum WageType {
-        SALARIED,
-        HOURLY
-    }
+    
 
     private static final String ERROR_MSG =
             "Cannot get annual wages because no valid employee type provided";
