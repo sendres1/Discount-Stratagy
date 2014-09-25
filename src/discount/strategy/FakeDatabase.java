@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package discount.strategy;
 
 /**
@@ -11,34 +10,21 @@ package discount.strategy;
  * @author sendres1
  */
 public class FakeDatabase {
-    private final customerArray = {"1", "endres"};
-    private final String [] productArray = new String[10];
-    
 
-void populateCustomerArray()
-{
-  customerArray[0][0] = "123" "Steven";
-  
+    private Customer[] customerArray;
+    private Product[] productArray;
 
-private String[] toppings = {"Cheese", "Pepperoni", "Black Olives"};
- 
-  // our constructor; print out the String array here
-  public JavaStringArrayTests1()
-  {
-    <b>int size = toppings.length;
-    for (int i=0; i<size; i++)
-    {
-      System.out.println(toppings[i]);
-    }</b>
-  }
+//    private final customerArray = {"1", "endres"};
+//    private final String [] productArray = new String[10];
+//    
+    public FakeDatabase() {
+        customerArray = new Customer[2];
+        productArray = new Product[2];
+        customerArray[0] = new Customer(1, "Endres");
+        customerArray[1] = new Customer(2, "Perez");
+        productArray[0] = new Product(1.00, "A", "a product");
+        productArray[1] = new Product(2.00, "B", "b product");
 
+    }
 
-
-
-
-
-
-
-
-}
 }
