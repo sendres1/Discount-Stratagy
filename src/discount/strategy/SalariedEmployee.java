@@ -1,4 +1,4 @@
-package dip.lab1;
+package discount.strategy;
 
 /**
  * A simple implementation sub-class of Employee. These are low-level classes

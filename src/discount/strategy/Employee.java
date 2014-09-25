@@ -1,4 +1,4 @@
-package dip.lab1;
+package discount.strategy;
 
 /**
  * The concrete super class of all employee types. What's wrong with this class?

@@ -1,4 +1,4 @@
-package dip.lab1;
+package discount.strategy;
 
 import javax.swing.JOptionPane;
 
