@@ -13,3 +13,10 @@ package discount.strategy;
 public class LineItem {
     
 }
+
+
+
+
+product id       description   unitprice    qty     discount  extended price
+1                   
+2   /t
