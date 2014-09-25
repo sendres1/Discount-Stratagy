@@ -21,6 +21,11 @@ public class Startup {
         SalariedEmployee emp2 = new SalariedEmployee(45000, 1250);
         SalariedEmployee emp3 = new SalariedEmployee(90000,0);
 
+         // Create a collection that we can process as a group --
+        // demands polymorphic behavior
+        Employee[] employees = {emp1, emp2, emp3};
+        
+        
         // High-level module
         HRService hr = new HRService();
 
@@ -33,8 +38,7 @@ public class Startup {
         System.out.println("Employee 2 annual compensation: " +
             nf.format(hr.getAnnualCompensationForEmployee(emp2)));
         System.out.println("Employee 3 annual compensation: " +
-            nf.format(hr.getAnnualCompensationForEmployee(emp3,
-            HRService.SALARIED_TYPE)));
+            nf.format(hr.getAnnualCompensationForEmployee(emp3)));
         
     }
 
