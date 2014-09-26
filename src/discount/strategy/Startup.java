@@ -11,7 +11,9 @@ import java.text.NumberFormat;
 public class Startup {
 
     public static void main(String[] args) {
+    
         
+          Receipt item = new Receipt("jacket", 1, 23.00); 
     }
 //
 }

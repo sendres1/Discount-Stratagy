@@ -12,11 +12,19 @@ package discount.strategy;
  */
 public class Receipt {
     private String customerid;
+
     ///will need to read the fake database and spin thru arrary matching on id
-    
+
+
     //private String storeid; not needed just getstoredesc
+
+     //declare variables  
+     private String description;  
+    private double price;  
+
     
     
+    private String printline; 
 //    print store
 //            print customer
                     

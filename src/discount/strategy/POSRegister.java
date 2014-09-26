@@ -12,4 +12,6 @@ package discount.strategy;
  */
 public class POSRegister {
     
+    
+    
 }

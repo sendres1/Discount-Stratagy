@@ -11,8 +11,8 @@ package discount.strategy;
  */
 public class FakeDatabase {
 
-    private Customer[] customerArray;
-    private Product[] productArray;
+    private final Customer[] customerArray;
+    private final Product[] productArray;
 
 //    private final customerArray = {"1", "endres"};
 //    private final String [] productArray = new String[10];
