@@ -59,9 +59,6 @@ public class FakeDatabase {
                 
     }
     
-  //  @Override
-  //  public String toString() {
-  //      return "FakeDatabase{" + "customerArray=" + customerArray + ", productArray=" + productArray + '}';
-  //  }
+  
 
 }
