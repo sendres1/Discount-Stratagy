@@ -8,6 +8,7 @@ package discount.strategy;
 /**
  *
  * @author sendres1
+ * @version 1.20
  */
 public class LineItem {
 
@@ -36,8 +37,7 @@ public class LineItem {
     }
     
  
-    
-    
+       
      public double getSubTotal(){
          
          return this.qty*this.product.getUnitPrice() - this.product.getDiscountAmt(this);

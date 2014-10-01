@@ -9,6 +9,7 @@ package discount.strategy;
 /**
  *
  * @author sendres1
+ * @version 1.35
  */
 public class POSRegister {
    private String ProductID;

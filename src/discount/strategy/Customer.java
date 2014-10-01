@@ -9,6 +9,7 @@ package discount.strategy;
 /**
  *
  * @author sendres1
+ * @version 1.05
  */
 public class Customer {
     private int customerNum;

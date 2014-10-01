@@ -9,6 +9,7 @@ package discount.strategy;
 /**
  *
  * @author sendres1
+ * @version 1.30
  */
 public  class NoDiscount implements DiscountStrategy {
     

@@ -8,10 +8,11 @@ package discount.strategy;
 /**
  *
  * @author sendres1
+ * @version 1.45
  */
 public class QuantityDiscount implements DiscountStrategy {
 
-    // private values =[5,10,20,100];
+    
     @Override
     public double calcDiscountAmt(LineItem item) {
         double discountAmt;

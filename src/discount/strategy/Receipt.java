@@ -9,6 +9,7 @@ package discount.strategy;
 /**
  *
  * @author sendres1
+ * @version 1.50
  */
 public class Receipt {
     private Store store;

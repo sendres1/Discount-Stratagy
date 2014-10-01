@@ -8,6 +8,7 @@ package discount.strategy;
 /**
  *
  * @author sendres1
+ * @version 1.15
  */
 public class FakeDatabase {
 
@@ -58,9 +59,9 @@ public class FakeDatabase {
                 
     }
     
-    @Override
-    public String toString() {
-        return "FakeDatabase{" + "customerArray=" + customerArray + ", productArray=" + productArray + '}';
-    }
+  //  @Override
+  //  public String toString() {
+  //      return "FakeDatabase{" + "customerArray=" + customerArray + ", productArray=" + productArray + '}';
+  //  }
 
 }
