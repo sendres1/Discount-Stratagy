@@ -13,6 +13,8 @@ package discount.strategy;
 public class QuantityDiscount implements DiscountStrategy {
     private int firstQtyBreak = 20;
     private double firstQtyDiscount = .05;
+    private int secondQtyBreak = 100;
+    private double secondQtyDiscount = .10;
 
     public QuantityDiscount(int firstQtyBreak, double firstQtyDiscount) {
         this.firstQtyBreak = firstQtyBreak;
@@ -28,11 +30,11 @@ public class QuantityDiscount implements DiscountStrategy {
         double unitPrice = item.getProduct().getUnitPrice();
 //        int FIRST_QTY_BREAK = 20;
 //        double FIRST_QTY_DISCOUNT = .05;
-        int SECOND_QTY_BREAK = 100;
-        double SECOND_QTY_DISCOUNT = .10;
+    //    int SECOND_QTY_BREAK = 100;
+    //    double SECOND_QTY_DISCOUNT = .10;
 
-        if (quantity > SECOND_QTY_BREAK) {
-            discountAmt = quantity * unitPrice * SECOND_QTY_DISCOUNT;
+        if (quantity > secondQtyBreak) {
+            discountAmt = quantity * unitPrice * secondQtyDiscount;
         } else if (quantity > firstQtyBreak) {
             discountAmt = quantity * unitPrice * firstQtyDiscount;
         } else {
