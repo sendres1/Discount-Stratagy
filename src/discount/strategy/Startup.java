@@ -15,7 +15,7 @@ public class Startup {
 
         FakeDatabase fd = new FakeDatabase();
 
-        Store s = new Store(9102, "Endres' Brookfield Store");
+        Store s = new Store(9102, "Kohls Brookfield Store");
         Customer c = fd.getCustomerByID(1); //new Customer(1,"Endres" );
         
        // System.out.print(s.)
@@ -42,6 +42,16 @@ public class Startup {
          
          reg.endReceipt();
          
+          Customer c2 = fd.getCustomerByID(2); //new Customer(1,"Endres" );
+         POSRegister reg2 = new POSRegister(c,s);
+         reg2.newReceipt();
+         reg2.additem(fd.getProductByID("B"), 100);
+         reg2.additem(fd.getProductByID("A"), 99);
+      //   sale 1
+      //   sale 2
+      //   end sale
+         
+         reg2.endReceipt();
          
         // Receipt sale = reg.
         

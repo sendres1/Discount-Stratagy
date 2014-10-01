@@ -11,8 +11,8 @@ package discount.strategy;
  * @author sendres1
  */
 public class Store {
-    private int storeNo = 1;
-    private String storeDesc = "Kohls";
+    private int storeNo;
+    private String storeDesc;
 
     
     //default constructor

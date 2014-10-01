@@ -64,6 +64,9 @@ public class Receipt {
     }
     
     public void printStore(){
+        System.out.println();
+        System.out.println();
+        System.out.println();
         System.out.println("Store: " + this.store.getStoreDesc()); 
                                               
     }
