@@ -30,7 +30,12 @@ public class Customer {
 
    
     public void setCustomerName(String customerName) {
+        if (customerName == null || customerName.isEmpty())
         this.customerName = customerName;
+    }
+
+    public void setCustomerNum(int customerNum) {
+        this.customerNum = customerNum;
     }
     
     

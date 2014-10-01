@@ -24,22 +24,35 @@ public class Receipt {
     ///will need to read the fake database and spin thru arrary matching on id
     //private String storeid; not needed just getstoredesc
      //declare variables  
-    public Receipt(Store store, Customer customer) {
+//    public Receipt(Store store, Customer customer) {
+//
+//        this.store = store;
+//        this.customer = customer;
+//        this.lineItems = new LineItem[0];
+//
+//   //     this.description = description;
+//        //     this.prodID = prodID;
+//        //     this.qty = qty;
+//    }
+    
+    public Receipt(Store store, int custId, DataAccessStrategy db) {
 
         this.store = store;
-        this.customer = customer;
+        this.customer = db.getCustomerByID(custId);
         this.lineItems = new LineItem[0];
 
    //     this.description = description;
         //     this.prodID = prodID;
         //     this.qty = qty;
     }
-
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
+        if(description == null || description.isEmpty()) {
+            throw new IllegalArgumentException();
+        }
         this.description = description;
     }
 
@@ -59,8 +72,8 @@ public class Receipt {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("Store: " + this.store.getStoreDesc());
-
+  //      System.out.println("Store: " + this.store.getStoreDesc());
+        System.out.println("Store: " +  store.getStoreDesc());  
     }
 
     private void printItems() {

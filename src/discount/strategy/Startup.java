@@ -14,24 +14,29 @@ public class Startup {
 
     public static void main(String[] args) {
 
-        FakeDatabase fd = new FakeDatabase();
+        DataAccessStrategy db = new FakeDatabase();
 
-        Store s = new Store(9102, "Kohls Brookfield Store");
-        Customer c = fd.getCustomerByID(1); //new Customer(1,"Endres" );
+        Store store = new Store(9102, "Kohls Brookfield Store");
+//        Customer customer = db.getCustomerByID(1); //new Customer(1,"Endres" );
 
-        POSRegister reg = new POSRegister(c, s);
-        reg.newReceipt();
-        reg.additem(fd.getProductByID("A"), 100);
-        reg.additem(fd.getProductByID("B"), 99);
-        reg.endReceipt();
+//        POSRegister reg = new POSRegister(customer, store);
+        POSRegister reg = new POSRegister(1, store, db);
+      //  reg.newReceipt();
+        
+       // Store store, int custId, DataAccessStrategy db
+//        reg.additem(fd.getProductByID("A"), 100);
+  //      public void additem(String prodId, int qty, DataAccessStrategy db){
+        reg.additem("A", 100, db);
+        reg.additem("B", 99, db);
+        reg.endSale();
 
         
-        Customer c2 = fd.getCustomerByID(2); //new Customer(1,"Endres" );
-        POSRegister reg2 = new POSRegister(c2, s);
-        reg2.newReceipt();
-        reg2.additem(fd.getProductByID("B"), 100);
-        reg2.additem(fd.getProductByID("A"), 99);
-        reg2.endReceipt();
+        Customer c2 = db.getCustomerByID(2); //new Customer(1,"Endres" );
+        POSRegister reg2 = new POSRegister(1, store, db);
+      //  reg2.newReceipt();
+        reg2.additem("B", 100, db);
+        reg2.additem("A", 99, db);
+        reg2.endSale();
 
     }
 //

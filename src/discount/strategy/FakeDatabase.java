@@ -10,7 +10,7 @@ package discount.strategy;
  * @author sendres1
  * @version 1.15
  */
-public class FakeDatabase {
+public class FakeDatabase implements DataAccessStrategy {
 
     public final Customer[] customerArray;
     public final Product[] productArray;
@@ -24,19 +24,22 @@ public class FakeDatabase {
         customerArray[0] = new Customer(1, "Endres");
         customerArray[1] = new Customer(2, "Perez");
         productArray[0] = new Product("A", "a product", 1.00, new NoDiscount());
-        productArray[1] = new Product("B", "b product", 2.00, new QuantityDiscount());
+        productArray[1] = new Product("B", "b product", 2.00, new QuantityDiscount(20,.05));
 
     }
 
+    @Override
     public Customer[] getCustomerArray() {
         return customerArray;
     }
 
+    @Override
     public Product[] getProductArray() {
         return productArray;
     }
     
     
+    @Override
     public Customer getCustomerByID(int ID){
         for(int i =0;i<customerArray.length;i++){
             int tempID = customerArray[i].getCustomerNum();
@@ -48,6 +51,7 @@ public class FakeDatabase {
                 
     }
     
+    @Override
     public Product getProductByID(String ID){
         for(int i =0;i<productArray.length;i++){
             String prodID = productArray[i].getProductId();

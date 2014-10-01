@@ -15,11 +15,16 @@ public class LineItem {
     public Product product;
     public int qty;
 
-    public LineItem(Product product, int qty) {
-        this.product = product;
+//    public LineItem(Product product, int qty) {
+//        this.product = product;
+//        this.qty = qty;
+//    }
+    
+    public LineItem(String prodId, int qty, DataAccessStrategy db) {
+        this.product = db.getProductByID(prodId);
         this.qty = qty;
     }
-
+    
     public Product getProduct() {
         return product;
     }
