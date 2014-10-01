@@ -11,14 +11,19 @@ package discount.strategy;
  * @author sendres1
  */
 public class Product {
-    private double unitPrice;  
+     
     private String productId;
     private String productDesc;
+    private double unitPrice; 
+   // private double discountAmt;
+    private DiscountStrategy strategy;
 
-    public Product(double unitPrice, String productId, String productDesc) {
+    public Product(String productId, String productDesc, double unitPrice, DiscountStrategy strategy) {
         this.unitPrice = unitPrice;
         this.productId = productId;
         this.productDesc = productDesc;
+        this.strategy = strategy;
+        
     }
 
     public double getUnitPrice() {
@@ -32,6 +37,13 @@ public class Product {
     public String getProductDesc() {
         return productDesc;
     }
+
+    public double getDiscountAmt(LineItem item) {
+    //????????????????????????
+        return strategy.calcDiscountAmt(item);
+    }
+    
+    
 
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;

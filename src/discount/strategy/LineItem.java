@@ -10,32 +10,37 @@ package discount.strategy;
  * @author sendres1
  */
 public class LineItem {
-    private String lineItems[]; 
-    private String tempItems[];
-    
 
+    public Product product;
+    public int qty;
 
-//private void addToArray(final LineItem item) { 
-//// needs validation
-//LineItem[] tempItems = new LineItem[lineItems.length + 1];       
-//System.arraycopy(lineItems, 0, tempItems, 0, lineItems.length);     
-//tempItems[lineItems.length] = item;
-//lineItems = tempItems;    }
-
-
- public static void main(String[] args) {
-        char[] copyFrom = { 'd', 'e', 'c', 'a', 'f', 'f', 'e',
-			    'i', 'n', 'a', 't', 'e', 'd' };
-        char[] copyTo = new char[copyFrom.length + 1];
-
-        System.arraycopy(copyFrom, 0, copyTo, 0, copyFrom.length);
-        System.out.println(new String(copyTo));
+    public LineItem(Product product, int qty) {
+        this.product = product;
+        this.qty = qty;
     }
 
+    public Product getProduct() {
+        return product;
+    }
 
-product id       description   unitprice    qty     discount  extended price
-1                   
-2   /t
+    public int getQty() {
+        return qty;
+    }
 
-        
-        }
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
+    }
+    
+ 
+    
+    
+     public double getSubTotal(){
+         
+         return this.qty*this.product.getUnitPrice() - this.product.getDiscountAmt(this);
+     }
+    
+   }

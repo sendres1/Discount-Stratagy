@@ -5,14 +5,16 @@
  */
 
 package discount.strategy;
-
+         
 /**
  *
  * @author sendres1
  */
-public class NoDiscount implements DiscountStrategy {
+public  class NoDiscount implements DiscountStrategy {
     
-    public double calcDiscountAmt(){
+  
+    @Override
+    public double calcDiscountAmt(LineItem item){
         return 0;
     }
 }

@@ -11,7 +11,15 @@ package discount.strategy;
  * @author sendres1
  */
 public class Receipt {
-    private String customerid;
+    private Store store;
+    private Customer customer;
+     private LineItem[] lineItems;   
+     double total;
+     private String description;     
+     int qty;
+     String prodID;
+
+   // private String customerID;
 
     ///will need to read the fake database and spin thru arrary matching on id
 
@@ -19,20 +27,72 @@ public class Receipt {
     //private String storeid; not needed just getstoredesc
 
      //declare variables  
-     private String description;  
-    private double price;  
+ 
 
+
+    public Receipt(Store store, Customer customer) {
+     
+        this.store = store;
+        this.customer = customer;
+        this.lineItems = new LineItem[0];
+        
+   //     this.description = description;
+   //     this.prodID = prodID;
+   //     this.qty = qty;
+     
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
+   
+    public void printReceipt(){
+        printStore();
+        printCustomer();
+         printItems();
+        printThanks();
+        
+    }
+        
+    public void printCustomer(){
+        System.out.println("  Client:  " + this.customer.getCustomerName());
+    }
+    
+    public void printStore(){
+        System.out.println("Store: " + this.store.getStoreDesc()); 
+                                              
+    }
+    
+    public void printItems(){
+        for(int i=0;i<lineItems.length;i++){
+        System.out.println("Product: " + lineItems[i].getSubTotal());
+        }
+    }
     
     
-    private String printline; 
-//    print store
-//            print customer
-                    
-                    1 to many
-                    print line item call line item
-                            
-                            end 
-                            print total
-                                    print message
+    public void printThanks(){
+        System.out.println("   THANKS ");
+    }
     
-}
+    public void addLineItem(LineItem item){
+        addToArray(item);
+    }
+    
+    
+    private void addToArray(final LineItem item) { 
+        // needs validation
+        LineItem[] tempItems = new LineItem[lineItems.length + 1];       
+        System.arraycopy(lineItems, 0, tempItems, 0, lineItems.length);     
+        tempItems[lineItems.length] = item;
+        lineItems = tempItems;    
+    }
+    
+    }
+    
+    
+    

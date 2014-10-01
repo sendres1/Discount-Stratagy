@@ -11,5 +11,5 @@ package discount.strategy;
  * @author sendres1
  */
 public interface DiscountStrategy {
-    
+    public abstract double calcDiscountAmt(LineItem item);
 }

@@ -1,6 +1,7 @@
 package discount.strategy;
 
 import java.text.NumberFormat;
+import java.util.Arrays;
 
 /**
  * Just a start and test class for this program. You may modify this class
@@ -11,9 +12,40 @@ import java.text.NumberFormat;
 public class Startup {
 
     public static void main(String[] args) {
-    
+
+        FakeDatabase fd = new FakeDatabase();
+
+        Store s = new Store(9102, "Endres' Brookfield Store");
+        Customer c = fd.getCustomerByID(1); //new Customer(1,"Endres" );
         
-          Receipt item = new Receipt("jacket", 1, 23.00); 
+       // System.out.print(s.)
+        
+        
+       // this doesn't work'
+      //  System.out.println(Arrays.toString(fd.getCustomerArray()));
+       // System.out.println(fd.toString());
+       // System.out.println(fd.customerArray[0]);
+        //customerArray[1])
+              
+        //this works
+   //      Receipt r = new Receipt("jacket", 1, 23.00); 
+    //     System.out.println(r.getDescription());
+         // productID, qty, customerno, discount
+        
+         POSRegister reg = new POSRegister(c,s);
+         reg.newReceipt();
+         reg.additem(fd.getProductByID("A"), 100);
+         reg.additem(fd.getProductByID("B"), 99);
+      //   sale 1
+      //   sale 2
+      //   end sale
+         
+         reg.endReceipt();
+         
+         
+        // Receipt sale = reg.
+        
+        // System.out.println(reg.getCustomerno());
     }
 //
 }

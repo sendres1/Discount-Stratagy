@@ -10,26 +10,33 @@ package discount.strategy;
  *
  * @author sendres1
  */
-public class QuantityDiscount implements DiscountStrategy {
-    private double amount;
-    private int quantity;
-    private double unitPrice;
-   // private values =[5,10,20,100];
+public  class QuantityDiscount implements DiscountStrategy {
+    
+
+
+    // private values =[5,10,20,100];
+    
+
 
     
-    public double calcDiscountAmt(){
+    @Override
+    public double calcDiscountAmt(LineItem item){
+        double discountAmt;
+        int quantity = item.getQty();
+        double unitPrice = item.getProduct().getUnitPrice();
+        
 //        switch (month) {
 //            case 1:  monthString = "January";
 //                     break;
 //            case 2:  monthString = "February";
         
         if (quantity > 100)
-                amount = quantity * .10;
+                discountAmt = quantity * unitPrice * .10;
         else   if (quantity > 20)
-                amount = quantity * .05; 
-                else amount = 0;
+                discountAmt = quantity * unitPrice * .05; 
+                else discountAmt = 0;
         
-        return amount;
+        return discountAmt;
         
     }
         
