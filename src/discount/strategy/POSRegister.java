@@ -7,7 +7,8 @@
 package discount.strategy;
 
 /**
- *
+ ** POSRegister concrete class instantiates store and receipt object to 
+ *  facilitate a sale
  * @author sendres1
  * @version 1.35
  */

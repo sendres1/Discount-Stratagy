@@ -7,7 +7,7 @@
 package discount.strategy;
 
 /**
- *
+ ** Product class has methods necessary to process a product for sale
  * @author sendres1
  * @version 1.40
  */

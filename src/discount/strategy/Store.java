@@ -7,7 +7,7 @@
 package discount.strategy;
 
 /**
- *
+ ** Store concrete class instantiates a store
  * @author sendres1
  * @version 1.20
  */

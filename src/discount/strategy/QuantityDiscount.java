@@ -6,7 +6,7 @@
 package discount.strategy;
 
 /**
- *
+ ** QuantityDiscount concrete class to return discount amount based on quantity sold
  * @author sendres1
  * @version 1.45
  */
@@ -16,7 +16,8 @@ public class QuantityDiscount implements DiscountStrategy {
     private int secondQtyBreak = 100;
     private double secondQtyDiscount = .10;
 
-    public QuantityDiscount(int firstQtyBreak, double firstQtyDiscount) {
+    public QuantityDiscount(int firstQtyBreak, double firstQtyDiscount,
+                            int secondQtyBreak, double secondQtyDiscount) {
         this.firstQtyBreak = firstQtyBreak;
         this.firstQtyDiscount = firstQtyDiscount;
     }

@@ -7,7 +7,7 @@
 package discount.strategy;
 
 /**
- *
+ * DiscountStrategy interface uses various discount arrangements.
  * @author sendres1
  * @version 1.15
  */

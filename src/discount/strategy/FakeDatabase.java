@@ -6,7 +6,7 @@
 package discount.strategy;
 
 /**
- *
+ ** FakeDatabase instantiates customer and product arrays
  * @author sendres1
  * @version 1.15
  */
@@ -24,7 +24,7 @@ public class FakeDatabase implements DataAccessStrategy {
         customerArray[0] = new Customer(1, "Endres");
         customerArray[1] = new Customer(2, "Perez");
         productArray[0] = new Product("A", "a product", 1.00, new NoDiscount());
-        productArray[1] = new Product("B", "b product", 2.00, new QuantityDiscount(20,.05));
+        productArray[1] = new Product("B", "b product", 2.00, new QuantityDiscount(20,.05, 100, .10));
 
     }
 

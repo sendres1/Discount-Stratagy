@@ -6,7 +6,7 @@
 package discount.strategy;
 
 /**
- *
+** Receipt class will process a store receipt
  * @author sendres1
  * @version 1.50
  */

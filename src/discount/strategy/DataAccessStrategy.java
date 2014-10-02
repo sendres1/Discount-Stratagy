@@ -7,7 +7,7 @@
 package discount.strategy;
 
 /**
- *
+ * DataAccessStrategy interface used to read various databases
  * @author sendres1
  */
 public interface DataAccessStrategy {

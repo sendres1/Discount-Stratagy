@@ -7,7 +7,8 @@
 package discount.strategy;
 
 /**
- *
+ ** Customer class instantiates a customer with a customer number and name
+ * 
  * @author sendres1
  * @version 1.05
  */

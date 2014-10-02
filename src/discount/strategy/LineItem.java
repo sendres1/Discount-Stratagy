@@ -6,7 +6,7 @@
 package discount.strategy;
 
 /**
- *
+ ** LineItem class calculates the lineitem of a sale 
  * @author sendres1
  * @version 1.20
  */
