@@ -17,8 +17,8 @@ public class Customer {
     private String customerName;
 
     public Customer(int customerNum, String customerName) {
-        this.customerNum = customerNum;
-        this.customerName = customerName;
+        setCustomerNum(customerNum);
+        setCustomerName(customerName);
     }
 
     public int getCustomerNum() {
@@ -30,12 +30,15 @@ public class Customer {
     }
 
    
-    public void setCustomerName(String customerName) {
-        if (customerName == null || customerName.isEmpty())
-        this.customerName = customerName;
+    public final void setCustomerName(String customerName) throws IllegalArgumentException {
+        if (customerName == null || customerName.isEmpty()){
+            throw new IllegalArgumentException("invalid customer name");}
+                   this.customerName = customerName;
     }
 
-    public void setCustomerNum(int customerNum) {
+    public void setCustomerNum(int customerNum) throws IllegalArgumentException {
+        if (customerNum <= 0) {
+            throw new IllegalArgumentException("invalid CustomerNum");}
         this.customerNum = customerNum;
     }
     

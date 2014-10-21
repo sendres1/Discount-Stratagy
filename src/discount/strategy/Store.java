@@ -24,7 +24,7 @@ public class Store {
     
     public Store(int storeNo, String storeDesc) {
         this.storeNo = storeNo;
-        this.storeDesc = storeDesc;
+        setStoreDesc(storeDesc);
     }
 
     public int getStoreNo() {
@@ -43,6 +43,11 @@ public class Store {
 //    }
 
     public void setStoreDesc(String storeDesc) {
+        
+         if (storeDesc == null || storeDesc.isEmpty()){
+            throw new IllegalArgumentException("invalid storeDesc");}
+              
+        
         this.storeDesc = storeDesc;
     }
 
